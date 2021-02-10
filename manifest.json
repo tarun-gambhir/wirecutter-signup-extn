@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Wirecutter Signup Wall Remover",
+  "version": "1.0",
+  "description": "Remove wirecutter's signup wall",
+  "short_name": "Wirecutter adblock",
+  "permissions": ["activeTab", "declarativeContent", "https://www.nytimes.com/wirecutter/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/wirecutter/*"],
+      "js": ["SignupWallRemover.js"]
+    }
+  ]
+}
